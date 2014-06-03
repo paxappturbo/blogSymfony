@@ -1,3 +1,0 @@
-blogSymfony
-===========
-tutoriel blogSymfony
