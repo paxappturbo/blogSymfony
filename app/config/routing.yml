@@ -1,0 +1,4 @@
+pax_blog:
+    resource: "@PaxBlogBundle/Resources/config/routing.yml"
+    prefix:   /blog
+
