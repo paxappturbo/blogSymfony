@@ -1,0 +1,31 @@
+pax_blog_homepage:
+    pattern:  /hello/{name}
+    defaults: { _controller: PaxBlogBundle:Default:index }
+
+paxblog_accueil:
+    pattern:    /{page}
+    defaults: { _controller:  PaxBlogBundle:Blog:index, page:1 }
+    requirements:
+        page: \d*
+
+paxblog_voir:
+    pattern:    /article/{id}
+    defaults: { _controller:  PaxBlogBundle:Blog:voir }
+    requirements:
+        id: \d+
+
+paxblog_ajouter:
+    pattern:    /ajouter
+    defaults: { _controller:  PaxBlogBundle:Blog:ajouter }
+
+paxblog_modifier:
+    pattern:    /modifier/{id}
+    defaults: { _controller: PaxBlogBundle:Blog:modifier}
+    requirements:
+        id: \d+
+
+paxblog_supprimer:
+    pattern:   /supprimer/{id}
+    defaults: { _controller: PaxBlogBundle:Blog:supprimer}
+    requirements:
+        id: \d+

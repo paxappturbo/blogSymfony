@@ -1,0 +1,35 @@
+{# src/Pax/BlogBundle/Resources/views/Blog/voir.html.twig #}
+
+{% extends "PaxBlogBundle::layout.html.twig" %}
+
+{% block title %}
+  Lecture d'un article - {{ parent() }}
+{% endblock %}
+
+{% block paxblog_body %}
+
+  <h2>
+    {{ article.titre }}
+  </h2>
+  <i>Par {{ article.auteur }}, le {{ article.date|date('d/m/Y') }}</i>
+
+  <div class="well">
+    {{ article.contenu }}
+  </div>
+
+  <p>
+    <a href="{{ path('paxblog_accueil') }}" class="btn">
+      <i class="icon-chevron-left"></i>
+      Retour à la liste
+    </a>
+    <a href="{{ path('paxblog_modifier', {'id': article.id}) }}" class="btn">
+      <i class="icon-edit"></i>
+      Modifier l'article
+    </a>
+    <a href="{{ path('paxblog_supprimer', {'id': article.id}) }}" class="btn">
+      <i class="icon-trash"></i>
+      Supprimer l'article
+    </a>
+  </p>
+
+{% endblock %}

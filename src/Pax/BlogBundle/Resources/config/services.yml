@@ -1,0 +1,9 @@
+parameters:
+#    pax_blog.example.class: Pax\BlogBundle\Example
+
+services:
+#    pax_blog.example:
+#        class: %pax_blog.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
+    pax_blog.antispam:
+        class:    Pax\BlogBundle\Antispam\PaxAntispam
